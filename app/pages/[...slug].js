@@ -7,7 +7,9 @@ const DynamicPage = () => {
   const router = useRouter();
   const { slug } = router.query;
 
+  // eslint-disable-next-line react/display-name
   const PageComponent = dynamic(() => import(`./${slug}`).catch(() => () => <div>Page Not Found</div>));
+  
 
   return (
     <Layout>
