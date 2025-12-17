@@ -6,21 +6,21 @@ import Link from 'next/link'
 export default function Dashboard() {
   const projects = [
     {
-      title: 'AdaptiveWorks',
-      description: 'View and manage AdaptiveWorks milestones with real-time data',
-      href: '/adaptiveworks',
+      title: 'AI Workflow Automation',
+      description: 'View and Manage Automated AI Workflows',
+      href: '/workflow_automation',
       icon: '📊'
     },
     {
-      title: 'NoSQL Database',
-      description: 'Access MongoDB data store with advanced filtering',
-      href: '/mongodb',
+      title: 'AI Document Processing (RAG)',
+      description: 'AI Driven Document Processing and Analysis',
+      href: '/document_processing',
       icon: '🗄️'
     },
     {
-      title: 'Snowflake',
-      description: 'Query Snowflake data warehouse analytics',
-      href: '/snowflake',
+      title: 'Snowflake Data Integration',
+      description: 'Update & Query Snowflake Data Warehouse via API Integration',
+      href: '/responsive_forms',
       icon: '❄️'
     }
   ]
@@ -36,7 +36,7 @@ export default function Dashboard() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
-            <Link key={project.href} href={project.href}>
+            <a key={project.href} href={project.href}>
               <Card className="h-full transition-all hover:shadow-lg hover:scale-105">
                 <CardHeader>
                   <div className="text-4xl mb-2">{project.icon}</div>
@@ -47,7 +47,7 @@ export default function Dashboard() {
                   <span className="text-sm text-primary font-medium">View Details →</span>
                 </CardContent>
               </Card>
-            </Link>
+            </a>
           ))}
         </div>
       </main>

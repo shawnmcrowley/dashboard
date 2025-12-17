@@ -2,8 +2,8 @@ import "./globals.css";
 import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
 
 export const metadata = {
-  title: "API Dashboard",
-  description: "Modern API integration dashboard",
+  title: "Application Dashboard",
+  description: "Modern Integration Dashboard",
   manifest: "/manifest.json",
 };
 
